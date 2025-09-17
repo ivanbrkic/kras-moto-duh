@@ -1,0 +1,181 @@
+/**
+ * Variables
+ */
+
+/**
+ * Rem settings
+ */
+$rem-size: 10px;
+
+/**
+ * Colors
+ */
+
+$white: #fff;
+$black: #000;
+$primary: #f2b808;
+$red: #e11c1f;
+$aqua: #5abfc0;
+$cherry: #541226;
+$grey: #bbbdbf;
+
+// $theme-colors map is used in the color utility classes.
+$theme-colors: (
+  'white': $white,
+  'black': $black,
+  'primary': $primary,
+);
+
+$body-color: $white;
+$body-bg: $aqua;
+
+/**
+ * Bootstrap variables and settings
+ */
+
+// Settings
+
+$enable-deprecation-messages: false;
+$enable-grid-classes: true;
+
+// Z-index
+
+$zindex-fixed: 1030;
+$zindex-sticky: 1020;
+
+// Grid
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+);
+
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+$grid-row-columns: 6;
+
+// Container
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1024px,
+  xl: 1140px,
+);
+
+// Spacing
+
+$spacer: 0.8rem;
+
+$spacers: (
+  0: 0,
+  1: (
+    $spacer * 1,
+  ),
+  1d5: (
+    $spacer * 1.5,
+  ),
+  2: (
+    $spacer * 2,
+  ),
+  3: (
+    $spacer * 3,
+  ),
+  4: (
+    $spacer * 4,
+  ),
+  5: (
+    $spacer * 5,
+  ),
+  6: (
+    $spacer * 6,
+  ),
+  8: (
+    $spacer * 8,
+  ),
+  15: (
+    $spacer * 15,
+  ),
+  20: (
+    $spacer * 20,
+  ),
+);
+
+// Sizes
+
+$sizes: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+  auto: auto,
+);
+
+// Display utility classes
+
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex,
+  inline-flex;
+
+// Overflow utility classes
+
+$overflows: auto, hidden;
+
+// Position utility classes
+
+$positions: static, relative, absolute, fixed, sticky;
+
+/**
+ * Typography
+ */
+
+$font-family-sans-serif: 'museo', system-ui;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  'Liberation Mono', 'Courier New', monospace; // stylelint-disable-line value-keyword-case
+
+$font-family-base: $font-family-sans-serif;
+
+$font-weight-thin: 300;
+$font-weight-normal: 500;
+$font-weight-medium: 700;
+$font-weight-bold: 900;
+
+$font-size-base: 3rem;
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.2;
+
+$link-color: inherit;
+$link-decoration: none;
+$link-hover-color: inherit;
+$link-hover-decoration: none;
+
+// Font levels.
+
+$type-levels: ();
+
+// Type breakpoint settings.
+
+$type-breakpoint-settings: (
+  xs: (),
+  sm: (),
+  md: (),
+  lg: (),
+  xl: (),
+);
+
+/**
+ * Code
+ */
+
+$code-color: #d63384;
+$pre-color: #666;
+$kbd-color: $white;
+$kbd-bg: $black;
+
+/**
+ * Tables
+ */
+$table-border-width: 0.1rem;
+$table-border-color: $black;

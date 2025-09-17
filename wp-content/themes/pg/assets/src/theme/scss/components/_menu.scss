@@ -1,0 +1,77 @@
+.logo {
+  height: 51px;
+}
+
+.main-menu {
+  list-style: none;
+  display: flex;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  li {
+    a {
+      padding: $spacer $spacer * 3.5;
+      display: block;
+      &:hover {
+        color: $aqua;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    font-size: 20px;
+    border-top: 1px solid invert($cherry, 10%);
+    padding: $spacer * 2 0;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: $cherry;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translate(100%, 0);
+    @at-root .is-nav-open & {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    li {
+      a {
+        padding: $spacer * 2 $spacer * 3;
+        text-align: left;
+        display: block;
+      }
+    }
+  }
+}
+
+.menu-toggle {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.3rem;
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+  &__stripe {
+    width: 26px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+  @at-root .is-nav-open &__stripe:nth-child(1) {
+    transform: translate(0, 9px) rotate(45deg);
+  }
+  @at-root .is-nav-open &__stripe:nth-child(2) {
+    opacity: 0;
+  }
+
+  @at-root .is-nav-open &__stripe:nth-child(3) {
+    transform: translate(0, -9px) rotate(-45deg);
+  }
+}

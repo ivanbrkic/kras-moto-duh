@@ -1,0 +1,19 @@
+# ignore uploads folder in content
+/wp-content/uploads/
+/wp-content/upgrade/
+/wp-content/mu-plugins/
+local-wp-config.php
+.DS_Store
+debug.log
+node_modules/
+.htaccess
+
+# ATOM #
+.sass-lint.yml
+ruleset.xml
+update-standards.sh
+wphb-logs/
+/.ignore
+.vscode/
+
+local-xdebuginfo.php

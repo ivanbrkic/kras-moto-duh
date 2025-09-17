@@ -1,0 +1,364 @@
+/**
+ * WordPress
+ */
+
+/**
+ * Gutenberg blocks
+ */
+
+.wp-block-image,
+.wp-block-quote,
+.wp-block-embed,
+.wp-block-video,
+.wp-block-audio {
+  margin-bottom: ($spacer * 3);
+}
+
+// Image
+
+.wp-block-image {
+  .aligncenter,
+  .alignright,
+  .alignleft {
+    display: table; // 1
+    margin-bottom: inherit;
+
+    figcaption {
+      display: table-caption; // 2
+      caption-side: bottom; // 2
+    }
+
+    // 1 - Make all img with alignment to act like tables.
+    // 2 - Make the caption wide as the img.
+  }
+
+  .aligncenter {
+    // Center the center aligned image.
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  // Change image alignment on larger screens.
+  @include media-breakpoint-up(sm) {
+    .aligncenter {
+      // Clear any floated images.
+      clear: both;
+    }
+
+    .alignleft {
+      margin-right: ($spacer * 3);
+      float: left;
+    }
+
+    .alignright {
+      float: right;
+      margin-left: ($spacer * 3);
+    }
+  }
+}
+
+// Gallery
+
+.wp-block-gallery {
+  @include make-row($spacer);
+  margin-bottom: ($spacer * 2); // Account for margin-bottom on .wp-block-image.
+
+  .wp-block-image {
+    margin-bottom: $spacer;
+
+    @include make-col-ready($spacer);
+    @include make-col(2);
+  }
+}
+
+// Embed
+
+.wp-block-embed {
+  iframe {
+    max-width: 100%; // Prevent iframe from getting bigger than the parent.
+  }
+}
+
+.wp-block-embed__wrapper {
+  // Make the embed responsive only if it has .wp-has-aspect-ratio class.
+  .wp-has-aspect-ratio & {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+
+    &::before {
+      display: block;
+      content: '';
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+
+  // Define aspect ratios.
+  /* stylelint-disable declaration-colon-space-after, selector-descendant-combinator-no-non-space, block-closing-brace-space-before */
+  .wp-embed-aspect-21-9 &::before {
+    padding-top: percentage(calc(9 / 21));
+  }
+  .wp-embed-aspect-18-9 &::before {
+    padding-top: percentage(calc(9 / 18));
+  }
+  .wp-embed-aspect-16-9 &::before {
+    padding-top: percentage(calc(9 / 16));
+  }
+  .wp-embed-aspect-4-3 &::before {
+    padding-top: percentage(calc(3 / 4));
+  }
+  .wp-embed-aspect-1-1 &::before {
+    padding-top: percentage(calc(1 / 1));
+  }
+  .wp-embed-aspect-9-16 &::before {
+    padding-top: percentage(calc(16 / 9));
+  }
+  .wp-embed-aspect-1-2 &::before {
+    padding-top: percentage(calc(2 / 1));
+  }
+  /* stylelint-enable declaration-colon-space-after, selector-descendant-combinator-no-non-space, block-closing-brace-space-before */
+}
+
+// Video & audio
+
+.wp-block-video video,
+.wp-block-audio audio {
+  display: block;
+}
+
+/**
+ * Screen reader text
+ */
+
+.screen-reader-text {
+  @include sr-only;
+}
+
+/**
+ * Comment form
+ */
+
+.comment-form {
+  label {
+    margin-top: $spacer;
+  }
+}
+
+.form-submit {
+  margin-top: $spacer;
+}
+
+.gform_button {
+  @extend .push;
+}
+
+.gfield {
+  padding: 0;
+}
+.gfield--type-text {
+  margin-bottom: $spacer * 6;
+  label {
+    color: $aqua;
+    font-size: 17.14px;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+    line-height: 20px;
+    display: block;
+    margin-bottom: 14px;
+  }
+  input[type='text'] {
+    border: 1px solid $grey;
+    line-height: 51px;
+    padding: 5px 20px;
+    width: 100%;
+  }
+  &.gfield_error {
+    input {
+      border-color: $red;
+    }
+  }
+}
+.gfield--type-checkbox {
+  margin-bottom: $spacer * 6;
+  legend {
+    display: none !important;
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  label {
+    font-size: 18px !important;
+    line-height: 23px;
+    font-weight: $font-weight-thin;
+    padding: 6px 0;
+    padding-left: calc(33px + 16px);
+    position: relative;
+    width: 100%;
+    max-width: 100% !important;
+    @include media-breakpoint-down(sm) {
+      font-size: 14px !important;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      display: none;
+      left: 12px;
+      top: 4px;
+      width: 10px;
+      height: 20px;
+      border: solid white;
+      border-width: 0 4px 4px 0;
+      transform: rotate(45deg);
+      z-index: 1;
+    }
+    &:after {
+      border: 2px solid $aqua;
+      width: 33px;
+      height: 33px;
+      order: 0;
+      transition: background 0.3s ease;
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      left: 0;
+    }
+    &:hover:after {
+      background: transparentize($aqua, 0.8);
+    }
+  }
+  input:checked + label {
+    &:after {
+      background: $aqua;
+    }
+    &:before {
+      display: block;
+    }
+  }
+}
+
+.gform_footer {
+  display: flex;
+  justify-content: center;
+}
+
+.gform_heading {
+  display: none;
+}
+
+.gform_submission_error {
+  color: $red;
+  font-size: 19px !important;
+  margin-bottom: $spacer * 2;
+  text-align: center;
+}
+.gfield_validation_message {
+  margin-top: 8px;
+  color: $red;
+  font-size: 14px !important;
+  margin-bottom: $spacer * 2;
+}
+
+.gfield--type-fileupload {
+  margin-bottom: $spacer * 6;
+  text-align: center;
+
+  .gfield_required {
+    display: none;
+  }
+  input[type='file'] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .gfield_description {
+    margin-top: 8px;
+    font-size: 14px !important;
+    margin-bottom: $spacer * 2;
+  }
+  label {
+    max-width: 100%;
+    cursor: pointer;
+    @extend .push;
+    // padding-top: 12px !important;
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 16px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    &:before {
+      background-image: url(/wp-content/themes/pg/assets/dist/theme/img/foto.svg);
+      content: '';
+      display: block;
+      width: 45px;
+      height: 32px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: relative;
+      bottom: 1px;
+    }
+    &.has-file {
+      font-size: 14px;
+      background: $cherry;
+      &:hover {
+        background: $cherry;
+      }
+      &:before {
+        display: none;
+      }
+    }
+  }
+  &.gfield_contains_required {
+    label {
+      // display: none;
+    }
+  }
+  .ginput_preview {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+  }
+}
+
+.gform_delete_file {
+  display: flex;
+  align-items: center;
+}
+
+.gfield_fileupload_filename {
+  @extend .push;
+  font-size: 14px !important;
+  background: $cherry !important;
+  &:hover {
+    background: $cherry !important;
+  }
+  &:before {
+    display: none;
+  }
+}
+.gfield_fileupload_progress,
+.gform_fileupload_rules {
+  display: none;
+}
+
+.gform_confirmation_message {
+  margin: 100px 0;
+}

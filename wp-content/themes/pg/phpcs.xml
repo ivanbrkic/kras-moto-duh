@@ -1,0 +1,21 @@
+<ruleset name="Playground">
+  <!-- Use Neuralab coding standards. -->
+  <rule ref="Neuralab" />
+
+  <!-- Exclude some folders from linting. -->
+  <exclude-pattern>/assets/*</exclude-pattern>
+  <exclude-pattern>/node_modules/*</exclude-pattern>
+  <exclude-pattern>/vendor/*</exclude-pattern>
+
+  <!-- Lint only PHP files. -->
+  <arg name="extensions" value="php"/>
+
+  <!-- Exceptions for WordPress.Security.EscapeOutput rule. -->
+  <rule ref="WordPress.Security.EscapeOutput">
+    <properties>
+      <property name="customAutoEscapedFunctions" type="array">
+        <element value="Pg_Assets"/>
+      </property>
+    </properties>
+  </rule>
+</ruleset>

@@ -1,0 +1,60 @@
+/**
+ * Typography
+ */
+
+.title-c {
+  font-size: 6rem;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  @include media-breakpoint-between(md, md) {
+    font-size: 4.5rem;
+  }
+}
+
+.thin {
+  font-weight: $font-weight-thin;
+}
+.bold {
+  font-weight: $font-weight-bold;
+}
+
+.title-1 {
+  font-size: 5.5rem;
+  font-weight: $font-weight-bold;
+}
+.title-2 {
+  font-size: 2.6rem;
+  font-weight: $font-weight-medium;
+  color: $red;
+}
+.title-3 {
+  font-size: 3rem;
+  font-weight: $font-weight-medium;
+}
+
+.title-x {
+  font-size: 5rem;
+  font-weight: $font-weight-normal;
+  @include media-breakpoint-between(md, md) {
+    font-size: 4rem;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 2.5rem;
+  }
+  b {
+    font-weight: $font-weight-medium;
+  }
+}
+
+.title-xd {
+  font-size: 4rem;
+  line-height: 5.5rem;
+  @include media-breakpoint-between(md, md) {
+    font-size: 3rem;
+    line-height: 4.2rem;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+}

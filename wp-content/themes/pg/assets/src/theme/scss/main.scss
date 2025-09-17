@@ -1,0 +1,59 @@
+/**
+ * Main Scss
+ */
+
+/**
+ * Variables
+ */
+@import 'abstracts/variables';
+
+/**
+ * Vendors
+ */
+@import '~normalize.css/normalize.css';
+@import 'vendors/bootstrap';
+
+/**
+ * Reboot
+ * Includes normalize - provides a starting point.
+ * Collected from all around the internets
+ * (bootstrap, suitcss, csstricks...)
+ */
+@import 'globals/reboot';
+
+/**
+ * Vendor modifier
+ * If you want to modify any default WP markup classes or if you need to override some vendor stylesheets (like Woocommerce, LearnDash) do it here.
+ */
+@import 'vendor-modifiers/wp';
+@import 'vendor-modifiers/swiper';
+
+/**
+ * Base - Native html tag foundation - no classes here. Modify this if you need.
+ * Typography - Typography classes.
+ */
+@import 'globals/base';
+@import 'globals/typography';
+
+/**
+ * Components
+ */
+@import 'components/branding';
+@import 'components/icons';
+@import 'components/tables';
+@import 'components/misc';
+@import 'components/menu';
+@import 'components/hero';
+
+/**
+ * Layouts
+ */
+@import 'layouts/header';
+@import 'layouts/editor';
+@import 'layouts/misc';
+/**
+ * Utilities
+ */
+@import 'utilities/headings';
+@import 'utilities/colors';
+@import 'utilities/misc';

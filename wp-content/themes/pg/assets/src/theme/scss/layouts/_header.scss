@@ -1,0 +1,37 @@
+/**
+ * Header
+ */
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: $cherry;
+  padding: $spacer 0;
+  top: 0;
+  z-index: 11;
+}
+
+.header__inner {
+  display: flex;
+}
+
+.main-navigation__menu {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+}
+
+.main-navigation__link {
+  padding: ($spacer * 2);
+  display: block;
+
+  &,
+  &:hover {
+    color: $white;
+  }
+
+  .main-navigation__item--is-active & {
+    color: $black;
+  }
+}

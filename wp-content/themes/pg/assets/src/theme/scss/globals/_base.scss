@@ -1,0 +1,74 @@
+/**
+ * Base
+ */
+
+html {
+  font-size: percentage(calc($rem-size / 16px));
+  min-height: 100vh;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  color: $body-color;
+  background-color: $body-bg;
+  min-height: 100vh;
+  @include media-breakpoint-down(sm) {
+    font-size: 2.5rem;
+  }
+}
+
+main {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+caption {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  background-color: transparent;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+  &.link {
+    font-weight: $font-weight-medium;
+    text-decoration: underline;
+  }
+}
+
+ul {
+  list-style: circle inside;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+audio,
+video {
+  max-width: 100%;
+}

@@ -1,0 +1,45 @@
+/**
+ * Playground specific skinny version of Bootstrap
+ */
+
+
+/* stylelint-disable no-invalid-position-at-import-rule */
+
+/**
+ * Bootstrap functions
+ */
+@import "~bootstrap/scss/functions";
+
+/**
+ * Variable helpers for sorting
+ */
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+/**
+ * Mixins
+ */
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "~bootstrap/scss/mixins/grid-framework";
+@import "~bootstrap/scss/mixins/grid";
+@import "~bootstrap/scss/mixins/deprecate";
+@import "~bootstrap/scss/mixins/clearfix";
+@import "~bootstrap/scss/mixins/screen-reader";
+
+/**
+ * Grid
+ */
+@import "~bootstrap/scss/grid";
+
+/**
+ * Utilities
+ */
+@import "~bootstrap/scss/utilities/display";
+@import "~bootstrap/scss/utilities/flex";
+@import "~bootstrap/scss/utilities/spacing";
+@import "~bootstrap/scss/utilities/clearfix";
+@import "~bootstrap/scss/utilities/float";
+@import "~bootstrap/scss/utilities/overflow";
+@import "~bootstrap/scss/utilities/position";
+@import "~bootstrap/scss/utilities/sizing";

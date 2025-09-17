@@ -1,0 +1,24 @@
+.mw-640 {
+  max-width: 64rem;
+  @include media-breakpoint-between(md, md) {
+    max-width: 50.5rem;
+  }
+}
+.mw-740 {
+  max-width: 74rem;
+  @include media-breakpoint-between(md, md) {
+    max-width: 61.5rem;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pr {
+  position: relative;
+}
+
+.zi-4 {
+  z-index: 4;
+}

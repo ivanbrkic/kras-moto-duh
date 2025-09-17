@@ -1,0 +1,41 @@
+/**
+ * Editor
+ *
+ * Helper class to style elements that par part of the user content and come from the_content() or ACF Wysiwyg Editor field.
+ */
+
+
+.editor {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-bottom: calc($spacer * 3);
+  }
+
+  // Lists
+  ul,
+  ol {
+    margin-bottom: calc($spacer * 3);
+
+    > li {
+      margin-bottom: calc($spacer / 2);
+
+      /* stylelint-disable-next-line selector-max-type */
+      > ul,
+      > ol {
+        margin-top: calc($spacer / 2);
+        margin-bottom: 0;
+        padding-left: calc($spacer * 2);
+      }
+    }
+  }
+
+  // Captions
+  figcaption {
+    margin-top: $spacer;
+  }
+}
