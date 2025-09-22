@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="305.869" height="176.82" viewBox="0 0 305.869 176.82">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_2389" data-name="Path 2389" d="M334.141,341.151A56.033,56.033,0,0,0,312.6,337.2a59.124,59.124,0,0,0-18.113,3.065,57.856,57.856,0,0,0-6.628,2.666,29.446,29.446,0,0,0-8.982-13.683,36.049,36.049,0,0,0-24.189-8.508,39.852,39.852,0,0,0-15.946,3.52c-7.14-14.4-23.2-24.23-42.221-24.012-24.03.277-44.449,16.5-48.443,37.333a27.482,27.482,0,0,0-22.12-10.392c-15.893.183-29.219,13-29.759,28.629a26.786,26.786,0,0,0,4.21,15.476,50.767,50.767,0,1,0,36,92.076,48.581,48.581,0,0,0,67.8-2.356c8.372,9.922,21.7,16.223,36.946,16.046a53.585,53.585,0,0,0,10.614-1.193c21.373-4.572,37.813-21.806,38.521-42.2a38.241,38.241,0,0,0-.771-9.078,56.362,56.362,0,0,0,19.936,3.319c28.517-.328,52.338-20.9,53.207-45.951.633-18.243-11.09-33.819-28.517-40.815" transform="translate(-56.813 -300.249)" fill="none"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="0.509" cy="0.494" r="0.696" gradientTransform="matrix(0.573, 0, 0, -1, -0.143, 6.902)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#541226"/>
+      <stop offset="0.057" stop-color="#5b1624"/>
+      <stop offset="0.397" stop-color="#4f1520"/>
+      <stop offset="1" stop-color="#301417"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_267" data-name="Group 267" clip-path="url(#clip-path)">
+    <rect id="Rectangle_146" data-name="Rectangle 146" width="313.025" height="179.469" transform="translate(-6.547 -0.215)" fill="url(#radial-gradient)"/>
+  </g>
+</svg>

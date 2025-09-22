@@ -1,254 +1,137 @@
 .hero {
-  aspect-ratio: 16/8;
   position: relative;
   background: $red;
-  margin-bottom: 5%;
-  margin-top: 67px;
-  @include media-breakpoint-between(md, md) {
-    aspect-ratio: 818/684;
-    margin-bottom: 30%;
-  }
-  @include media-breakpoint-down(sm) {
-    aspect-ratio: 421/639;
-    margin-bottom: 60%;
-  }
+  margin-top: 66px; // header
+
   > img {
     z-index: 2;
   }
-  &__moto {
-    position: absolute;
-    width: 39.5%;
-    left: 11%;
-    top: 26%;
-    @include media-breakpoint-between(md, md) {
-      position: absolute;
-      width: 58%;
-      left: 14%;
-      top: 22%;
-    }
-    @include media-breakpoint-down(sm) {
-      width: 95.5%;
-      left: 6%;
-      top: 22%;
-    }
-  }
-  &__slatki {
-    position: absolute;
-    width: 23%;
-    left: 2.5%;
-    top: 13%;
-    @include media-breakpoint-between(md, md) {
-      width: 34%;
-      top: 6%;
-      left: 5%;
-    }
-    @include media-breakpoint-down(sm) {
-      width: 56%;
-      left: 5.5%;
-      top: 5%;
-    }
-  }
-  &__njemu {
-    position: absolute;
-    width: 26.5%;
-    top: 40%;
-    right: 21%;
-    @include media-breakpoint-between(md, md) {
-      width: 47.5%;
-      top: 52%;
-      right: 12%;
-    }
-    @include media-breakpoint-down(sm) {
-      position: absolute;
-      width: 81.5%;
-      top: 54%;
-      right: 8%;
-    }
-  }
-  &__100 {
-    position: absolute;
-    width: 11%;
-    top: 62%;
-    left: 9.5%;
-    @include media-breakpoint-between(md, md) {
-      width: 25%;
-      top: 51%;
-      left: 7.5%;
-    }
-    @include media-breakpoint-down(sm) {
-      display: none;
-    }
-  }
-  &__ljama {
-    position: absolute;
-    width: 26.5%;
-    top: 55%;
-    left: 20.5%;
-    @include media-breakpoint-between(md, md) {
-      width: 51.5%;
-      top: 69%;
-      left: 14.5%;
-    }
-    @include media-breakpoint-down(sm) {
-      width: 78.5%;
-      top: 80%;
-      left: 5.5%;
-    }
-  }
-  &__ljama-alo {
-    position: fixed;
-    width: 43vw;
-    top: 7vw;
-    right: -23vw;
-    z-index: 3 !important;
-    @include media-breakpoint-between(md, md) {
-      width: calc(43vw * 1.35);
-      top: 2vw;
-      right: -33vw;
-      position: absolute;
-    }
-    @include media-breakpoint-down(sm) {
-      position: absolute;
-      width: 67vw;
-      top: -37vw;
-      right: -11vw;
-      transform: rotate(221deg);
-    }
-  }
-  &__alo {
-    position: fixed;
-    width: 7.7vw;
-    top: 19vw;
-    right: 17vw;
-    z-index: 3 !important;
-    @include media-breakpoint-between(md, md) {
-      width: calc(7.7vw * 1.35);
-      top: 20vw;
-      right: 19.5vw;
-      position: absolute;
-    }
-    @include media-breakpoint-down(sm) {
-      display: none;
-    }
-  }
+
+	&__duh {
+		position: absolute;
+    width: 40.42%;
+		max-width: 776px;
+    right: 0;
+    top: 0;
+		transform: translate(31%, -10%);
+	}
+
+	&__keks {
+		opacity: 1;
+		position: absolute;
+		width: 14%;
+    left: 43.4%;
+    top: 53.9%;
+		animation: turn 5s ease-in-out infinite alternate;
+	}
+
+	@keyframes turn {
+		0% {
+				rotate: 30deg;
+		}
+	
+		100% {
+			rotate: -30deg;
+		}
+	}
+
+	@keyframes twist {
+		0% {
+			rotate: 0deg;
+			scale: 0.99;
+		}
+		100% {
+				rotate: 2deg;
+				scale: 1.01;
+		}
+	
+	}
+
+	@keyframes twist-negative {
+		0% {
+				rotate: 2deg;
+				scale: 1.01;
+		}
+	
+		100% {
+			rotate: 0;
+			scale: 0.99;
+		}
+	}
+
+	&__header-add {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		animation: twist 6s ease-in-out infinite alternate;
+	}
+	&__header-add-2 {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		animation: twist-negative 6s ease-in-out infinite alternate;
+	}
+
+	&__header {
+		position: relative;
+		width: 63.2%;
+		max-width: 1212px;
+		left: 42%;
+		transform: translate(-50%, 0);
+		@include media-breakpoint-up(xl) {
+			left: 50%;
+		}
+		> .hero__header-img {
+			width: 100%;
+		}
+	}
   &__trans {
     position: absolute;
     width: 102%;
     bottom: -1%;
     left: -1%;
+		
     max-width: none;
     z-index: 1 !important;
   }
-  &__arr {
-    position: absolute;
-    width: 8%;
-    bottom: 28%;
-    right: 42%;
-    @include media-breakpoint-between(md, md) {
-      width: 14%;
-      bottom: 10%;
-      right: 21%;
-      transform: rotate(347deg);
-    }
-    @include media-breakpoint-down(sm) {
-      display: none;
-    }
-  }
-  &__arr-b {
-    position: absolute;
-    width: 4.5%;
-    bottom: 56%;
-    right: 48%;
-    @include media-breakpoint-between(md, md) {
-      width: 8%;
-      bottom: 44%;
-      right: 58%;
-      transform: rotate(30deg);
-    }
-    @include media-breakpoint-down(sm) {
-      display: none;
-    }
-  }
-  &__arr-c {
-    position: absolute;
-    width: 3.5%;
-    top: 29%;
-    left: 10%;
-    @include media-breakpoint-between(md, md) {
-      position: absolute;
-      width: 4.5%;
-      top: 19%;
-      left: 19%;
-    }
-    @include media-breakpoint-down(sm) {
-      width: 8.5%;
-      top: 17%;
-      left: 35%;
-      transform: rotate(94deg);
-    }
-  }
 
-  &__dot {
-    position: absolute;
-    width: 9%;
-    z-index: 0 !important;
-    &--1 {
-      top: 51%;
-      left: -4%;
-      @include media-breakpoint-between(md, md) {
-        top: -10vw;
-        left: 47%;
-        width: 17%;
-      }
-      @include media-breakpoint-down(sm) {
-        display: none;
-      }
-    }
-    &--2 {
-      top: -5%;
-      left: 24%;
-      @include media-breakpoint-between(md, md) {
-        top: 32%;
-        left: -10%;
-        width: 17%;
-      }
-      @include media-breakpoint-down(sm) {
-        display: none;
-      }
-    }
-    &--3 {
-      top: 18%;
-      left: 53%;
-      @include media-breakpoint-between(md, md) {
-        top: 71.5%;
-        left: 93%;
-        width: 17%;
-        z-index: 10 !important;
-      }
-      @include media-breakpoint-down(sm) {
-        display: none;
-      }
-    }
-    &--4 {
-      top: 83%;
-      left: 50%;
-      @include media-breakpoint-down(md) {
-        display: none;
-      }
-    }
-    &--5 {
-      top: -1%;
-      left: 74%;
-      @include media-breakpoint-down(md) {
-        display: none;
-      }
-    }
-    &--6 {
-      top: 64%;
-      left: 79%;
-      @include media-breakpoint-down(md) {
-        display: none;
-      }
-    }
-  }
+	&__label {
+		top: 0vw;
+		position: relative;
+		text-align: center;
+		z-index: 2;
+		padding: 1% 0;
+		.label {
+			display: inline-block;
+			position: relative;
+			padding: $spacer*4 $spacer*6;
+			&:before {
+				content: '';
+				width: 100%;
+				height: 100%;
+				background-image: url('/wp-content/themes/pg/assets/static/img/flag.svg');
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-position: center;
+				z-index: -1;
+				
+			}
+			@include media-breakpoint-down(xs) {
+				padding: $spacer*2 $spacer*3;
+			}
+		}
+
+		@include media-breakpoint-down(sm) {
+			padding: 0;
+			top: 1vw;
+		}
+	}
 }

@@ -1,10 +1,11 @@
 <header class="header">
 	<div class="wrapper d-flex justify-content-between align-items-center">
-		<img class="logo" src="/wp-content/themes/pg/assets/dist/theme/img/logo.svg" alt="">
+		<img class="logo" src="/wp-content/themes/pg/assets/static/img/logo.svg" alt="">
 		<ul class="main-menu">
-			<li><a data-scroll href="/#nagrade">Nagrade</a></li>
-			<li><a data-scroll href="/#prijava">Prijava</a></li>
-			<li><a data-scroll href="/#dobitnici">Dobitnici</a></li>
+			<li><a class="js-scroll" href="#moto">Moto</a></li>
+			<li><a class="js-scroll" href="#nagrade">Nagrade</a></li>
+			<li><a class="js-scroll" href="#prijava">Prijava</a></li>
+			<!-- <li><a class="js-scroll" href="#dobitnici">Dobitnici</a></li> -->
 			<li><a class="js-pravila" href="">Pravila natjecanja</a></li>
 		</ul>
 		<div class="menu-toggle">

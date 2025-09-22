@@ -7,12 +7,9 @@
  */
 
 switch ( $hostname ) {
-	case 'motoljama.kras.hr':
+	case 'tkojepojeomoto.kras.hr':
+	case 'www.tkojepojeomoto.kras.hr':
 		define( 'WP_ENV', 'production' );
-		break;
-
-	case 'staging.example.com':
-		define( 'WP_ENV', 'staging' );
 		break;
 
 	default:

@@ -146,46 +146,46 @@ if (!isDirectoryEmpty('theme/js/vendor')) {
 
 // Images
 // Mix doesn't have support for image minification out of the box so we have to modify webpack config.
-mix.webpackConfig({
-  plugins: [
-    new copyWebpackPlugin({ // eslint-disable-line new-cap
-      patterns: [
-        {
-          context: `${sourcePath}/theme/img/`,
-          from: '**/*.{jpg,jpeg,png,gif,svg}',
-          to: 'theme/img',
-        },
-      ],
-    }),
-    new ImageMinimizerPlugin({
-      test: [
-        /\.(jpe?g|png|gif)$/i, // Image file extensions.
-        /(?<!sprite-icons)\.svg$/i, // Separate RegEx for SVG but exclude sprite-icons.svg.
-      ],
-      minimizer: {
-        implementation: ImageMinimizerPlugin.imageminMinify,
-        options: {
-          plugins: [
-            [
-              'gifsicle',
-              {
-                interlaced: true,
-              },
-            ],
-            [
-              'optipng',
-              {
-                optimizationLevel: 5,
-              },
-            ],
-            'mozjpeg',
-            'svgo',
-          ],
-        },
-      },
-    }),
-  ],
-});
+// mix.webpackConfig({
+//   plugins: [
+//     new copyWebpackPlugin({ // eslint-disable-line new-cap
+//       patterns: [
+//         {
+//           context: `${sourcePath}/theme/img/`,
+//           from: '**/*.{jpg,jpeg,png,gif,svg}',
+//           to: 'theme/img',
+//         },
+//       ],
+//     }),
+//     new ImageMinimizerPlugin({
+//       test: [
+//         /\.(jpe?g|png|gif)$/i, // Image file extensions.
+//         /(?<!sprite-icons)\.svg$/i, // Separate RegEx for SVG but exclude sprite-icons.svg.
+//       ],
+//       minimizer: {
+//         implementation: ImageMinimizerPlugin.imageminMinify,
+//         options: {
+//           plugins: [
+//             [
+//               'gifsicle',
+//               {
+//                 interlaced: true,
+//               },
+//             ],
+//             [
+//               'optipng',
+//               {
+//                 optimizationLevel: 5,
+//               },
+//             ],
+//             'mozjpeg',
+//             'svgo',
+//           ],
+//         },
+//       },
+//     }),
+//   ],
+// });
 
 // SVG sprite
 mix.svgSprite(

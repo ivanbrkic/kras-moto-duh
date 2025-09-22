@@ -2,59 +2,72 @@
  * Typography
  */
 
-.title-c {
-  font-size: 6rem;
-  font-weight: 900 !important;
-  text-transform: uppercase;
-  @include media-breakpoint-between(md, md) {
-    font-size: 4.5rem;
-  }
+ @font-face {
+	font-family: 'Giggles BTN';
+	src: url('/wp-content/themes/pg/assets/fonts/GigglesBTN.woff2') format('woff2'),
+			url('/wp-content/themes/pg/assets/fonts/GigglesBTN.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
-.thin {
-  font-weight: $font-weight-thin;
+
+.title-c1 {
+	font-family: $font-family-comic;
+  font-size: 6rem;
+	font-weight: $font-weight-500;
+	@include media-breakpoint-down(sm) {
+		font-size: 4.3rem;
+	}
 }
-.bold {
-  font-weight: $font-weight-bold;
+
+.title-c2 {
+	font-family: $font-family-comic;
+  font-size: 4.4rem;
+	font-weight: $font-weight-500;
+	@include media-breakpoint-down(sm) {
+		font-size: 3.2rem;
+	}
 }
 
 .title-1 {
-  font-size: 5.5rem;
-  font-weight: $font-weight-bold;
+  font-size: 6rem;
+  font-weight: $font-weight-500;
+	@include media-breakpoint-down(sm) {
+		font-size: 4.3rem;
+	}
+
 }
 .title-2 {
-  font-size: 2.6rem;
-  font-weight: $font-weight-medium;
-  color: $red;
+  font-size: 5rem;
+  font-weight: $font-weight-500;
 }
 .title-3 {
-  font-size: 3rem;
-  font-weight: $font-weight-medium;
+  font-size: 3.6rem;
+  font-weight: $font-weight-500;
+	line-height: 1.5;
+	@include media-breakpoint-down(sm) {
+		font-size: 2.2rem;
+	}
 }
 
-.title-x {
-  font-size: 5rem;
-  font-weight: $font-weight-normal;
-  @include media-breakpoint-between(md, md) {
-    font-size: 4rem;
-  }
-  @include media-breakpoint-down(sm) {
-    font-size: 2.5rem;
-  }
-  b {
-    font-weight: $font-weight-medium;
-  }
+.label {
+	font-family: $font-family-comic;
+	font-weight: $font-weight-500;
+	font-size: 5rem;
+	@include media-breakpoint-down(sm) {
+		font-size: 3.6rem;
+	}
+	@include media-breakpoint-down(xs) {
+		font-size: 2.4rem;
+	}
 }
 
-.title-xd {
-  font-size: 4rem;
-  line-height: 5.5rem;
-  @include media-breakpoint-between(md, md) {
-    font-size: 3rem;
-    line-height: 4.2rem;
-  }
-  @include media-breakpoint-down(sm) {
-    font-size: 2.5rem;
-    line-height: 3.5rem;
-  }
+.p {
+	font-family: $font-family-comic;
+	font-weight: $font-weight-500;
+	font-size: 4.7rem;
+	@include media-breakpoint-down(sm) {
+		font-size: 3.4rem;
+	}
 }
