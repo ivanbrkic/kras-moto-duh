@@ -32,7 +32,7 @@ define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true );
 
 // Neuralab debug.
 define( 'SHOW_DEBUG_CONSOLE', true );
-define( 'SHOW_RESPONSIVE_CONSOLE', true );
+// define( 'SHOW_RESPONSIVE_CONSOLE', true );
 
 /**
  * Memory limit.

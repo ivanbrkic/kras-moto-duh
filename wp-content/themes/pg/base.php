@@ -26,6 +26,12 @@
 
 		<?php get_template_part( 'templates/footer' ); ?>
 
+			<div class="consent">
+				<button class="consent__button" data-cc="show-preferencesModal">
+					Postavke privatnosti
+				</button>
+			</div>
+
 		<?php
 		/**
 		 * Add get_footer hook so other plugins can hook in.

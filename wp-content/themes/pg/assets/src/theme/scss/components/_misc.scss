@@ -18,16 +18,16 @@
 				rotate: 3deg;
 				translate: 40px 0;
 		}
-	
-	
-	
+
+
+
 		50% {
 			rotate: 0deg;
 			translate: 20px 10px;
 		}
-	
-	
-	
+
+
+
 		100% {
 			rotate: 3deg;
 			translate: 50px 0;
@@ -205,7 +205,7 @@
 			width: 17vw;
 			filter: blur(3px);
 
-			
+
 		}
 
 		&--2 {
@@ -504,4 +504,22 @@
 		transform:translate(31%, -11%);
 		filter: blur(0px);
   }
+}
+
+.consent {
+	position: FIXED;
+	bottom: 0;
+	right: $spacer*3;
+	z-index: 1;
+	display: flex;
+	justify-content: flex-end;
+	padding: 0;
+	z-index: 1000;
+	&__button {
+		background: $white;
+		color: $cherry;
+		padding: $spacer;
+		font-size: 1.2rem;
+	}
+
 }
