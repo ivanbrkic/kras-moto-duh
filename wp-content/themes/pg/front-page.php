@@ -10,7 +10,7 @@
 				<img class="hero__keks" srcset="/wp-content/themes/pg/assets/static/img/keks.png 1x, /wp-content/themes/pg/assets/static/img/keks@2x.png 2x" src="/wp-content/themes/pg/assets/static/img/keks.png">
 	</div>
 	<img class="hero__trans" src="/wp-content/themes/pg/assets/static/img/trans-cherry.svg" />
-	<div class="hero__label">
+	<div class="hero__label" style="opacity: 0;">
 		<div class="wrapper">
 			<h2 class="label">NATJEČAJ KREĆE 6.10.2025.</h2>
 		</div>
@@ -39,7 +39,7 @@
 					<img class="mystery-box__cloud" src="/wp-content/themes/pg/assets/static/img/cloud.svg" />
 					<img class="mystery-box__cloud-2" src="/wp-content/themes/pg/assets/static/img/cloud.svg" />
 					<img class="mystery-box__stars" src="/wp-content/themes/pg/assets/static/img/stars-2.svg" />
-					
+
 						<img class="" srcset="/wp-content/themes/pg/assets/static/img/box.png 1x, /wp-content/themes/pg/assets/static/img/box@2x.png 2x"
 						src="/wp-content/themes/pg/assets/static/img/box.png" />
 					</div>
