@@ -20,7 +20,7 @@
 			<div class="mw-950 mx-auto">
 				
 				<p class="title-3">
-				Objava dobitnika za prvi tjedan natječaja: 14.10.2025.<br>
+				<a href="#tjedan1" style="text-decoration:underline;">Dobitnici prvog tjedna (14.10.2025.)</a><br>
 Objava dobitnika za drugi tjedan natječaja: 21.10.2025.<br>
 Objava dobitnika za treći tjedan natječaja: 28.10.2025.<br>
 Objava dobitnika za četvrti tjedan natječaja: 4.11.2025.

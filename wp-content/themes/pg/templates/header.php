@@ -5,7 +5,7 @@
 			<li><a class="js-scroll" href="#moto">Moto</a></li>
 			<li><a class="js-scroll" href="#nagrade">Nagrade</a></li>
 			<li><a class="js-scroll" href="#prijava">Prijava</a></li>
-			<!-- <li><a class="js-scroll" href="#dobitnici">Dobitnici</a></li> -->
+			<li><a class="js-scroll" href="#dobitnici">Dobitnici</a></li>
 			<li><a class="js-pravila" href="">Pravila natjecanja</a></li>
 		</ul>
 		<div class="menu-toggle">

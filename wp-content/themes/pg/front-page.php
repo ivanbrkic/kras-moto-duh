@@ -70,8 +70,6 @@
 <div id="prijava" style="position: relative; z-index: 2;">
 	<?php get_template_part( 'templates/prijava' ); ?>
 </div>
-<?php if (false) : ?>
 <div id="dobitnici">
 	<?php get_template_part( 'templates/dobitnici' ); ?>
 </div>
-<?php endif; ?>
