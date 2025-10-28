@@ -12,18 +12,18 @@
 			<div class="mw-790 mx-auto mb-5">
 				<h2 class="title-c1 mt-1 mb-6">Samo da ti dođe utorak </h2>
 				<p class="p">
-				Najkreativnije radove nagrađujemo svakog utorka, četiri tjedna zaredom. Sretni dobitnici bit će objavljeni na ovoj stranici. 
+				Najkreativnije radove nagrađujemo svakog utorka, četiri tjedna zaredom. Sretni dobitnici bit će objavljeni na ovoj stranici.
 
 				</p>
 
 			</div>
 			<div class="mw-950 mx-auto">
-				
+
 				<p class="title-3">
 				<a href="#tjedan1" style="text-decoration:underline;">Dobitnici prvog tjedna (14.10.2025.)</a><br>
 				<a href="#tjedan2" style="text-decoration:underline;">Dobitnici drugog tjedna (21.10.2025.)</a><br>
-Objava dobitnika za treći tjedan natječaja: 28.10.2025.<br>
-Objava dobitnika za četvrti tjedan natječaja: 4.11.2025.
+				<a href="#tjedan3" style="text-decoration:underline;">Dobitnici trećeg tjedna (28.10.2025.)</a><br>
+Objava dobitnika za četvrti tjedan natječaja: 4.11.2025.<br>
 				</p>
 			</div>
 		</div>
